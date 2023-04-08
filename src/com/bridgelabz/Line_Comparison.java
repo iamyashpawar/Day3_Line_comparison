@@ -43,7 +43,7 @@ public class Line_Comparison
 
         temp = (a2 - a1 ) * (a2 - a1 ) + (b2-b1) * (b2-b1);
         legthofLine2 = Math.sqrt(temp);
-        System.out.println("Length of second line is : " + legthofLine2);
+        System.out.println("Length of second line two is : " + legthofLine2);
 
           String l1 =Double.toString(legthofLine1);
           String l2 = Double.toString(legthofLine2);
@@ -55,5 +55,22 @@ public class Line_Comparison
           else {
               System.out.println("Line 1 & Line 2 are not Equal");
           }
+
+        int temp2=l1.compareTo(l2);
+        System.out.println(temp2);
+        {
+            if (temp2 ==0)
+            {
+                System.out.println("Both Line 1 & Line 2 are equal");
+            } else if (temp2==1)
+            {
+                System.out.println("Line 1 is greater than line 2");
+            }
+            else
+            {
+                System.out.println("Line 2 is greater than line 1");
+            }
+        }
     }
+
 }
