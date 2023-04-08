@@ -1,29 +1,59 @@
 package com.bridgelabz;
 
+import java.util.Scanner;
+
 public class Line_Comparison
 {
-    static int x1 = 5;
-    static int y1 = 7;
-    static int x2 = 3;
-    static int y2 = 4;
 
 
     public static void main(String[] args)
     {
 
-
-
         System.out.println(" Welcome To Line Comparison ");
-        double legthofLine=0;
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter x1 : " );
+        int x1 = sc.nextInt();
+        System.out.println("Enter y1 : ");
+        int y1= sc.nextInt();
+
+        System.out.println("Enter x2 : " );
+        int x2 = sc.nextInt();
+        System.out.println("Enter y2 : ");
+        int y2= sc.nextInt();
+
+        double legthofLine1=0;
+        double legthofLine2=0;
         double temp;
 
-        temp = Math.sqrt((x2 - x1 ) * (x2 - x1 )) + ((y2-y1) * (y2-y1));
+        temp = (x2 - x1 ) * (x2 - x1 )+ (y2-y1) * (y2-y1);
 
-        legthofLine = Math.sqrt(temp);
-        System.out.println("Length og the line is : " + legthofLine);
+        legthofLine1 = Math.sqrt(temp);
+        System.out.println("Length of the line one is : " + legthofLine1);
 
+        System.out.println("Enter a1 : " );
+        int a1 = sc.nextInt();
+        System.out.println("Enter b1 : ");
+        int b1= sc.nextInt();
 
+        System.out.println("Enter a2 : " );
+        int a2 = sc.nextInt();
+        System.out.println("Enter b2 : ");
+        int b2= sc.nextInt();
 
+        temp = (a2 - a1 ) * (a2 - a1 ) + (b2-b1) * (b2-b1);
+        legthofLine2 = Math.sqrt(temp);
+        System.out.println("Length of second line is : " + legthofLine2);
 
+          String l1 =Double.toString(legthofLine1);
+          String l2 = Double.toString(legthofLine2);
+
+          if(l1.equals(l2))
+          {
+              System.out.println("Line 1 & Line 2 are Equal ");
+          }
+          else {
+              System.out.println("Line 1 & Line 2 are not Equal");
+          }
     }
 }
